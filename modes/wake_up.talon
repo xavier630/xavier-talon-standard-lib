@@ -11,8 +11,12 @@ mode: all
     user.homophones_hide()
     user.help_hide()
     user.mouse_sleep()
-    speech.disable()
+    speech.10disable()
     user.engine_sleep()
+^go to sleep$: speech.disable()
+^tell sleep$: speech.disable()
 ^talon sleep$: speech.disable()
+^wake up$: speech.enable()
+^tell wake$: speech.enable()
 ^talon wake$: speech.enable()
 
