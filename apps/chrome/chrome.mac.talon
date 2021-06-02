@@ -66,3 +66,14 @@ action(browser.submit_form):
 
 action(browser.toggle_dev_tools):
 	key(cmd-alt-i)
+
+# Custom - designed for vimium
+^links$: key(f)
+^link$: key(f)
+^scroll tiny down: key(j)
+^scroll tiny up: key(k)
+^scroll half down: key(d)
+^mini page$: key(d)
+^scroll half up$: key(u)
+
+
