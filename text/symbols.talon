@@ -4,6 +4,10 @@ double dash: "--"
 (bracket | brack | left bracket): "{"
 (rbrack | are bracket | right bracket): "}"
 triple quote: "'''"
+(triple grave | triple grave accent):
+	insert("```")
+(grave | grave accent):
+    insert("`")
 (dot dot | dotdot): ".."
 #ellipses: "…"
 ellipses: "..."
@@ -42,6 +46,9 @@ inside percent:
 	key(left)
 inside quotes:
 	insert('""')
+	key(left)
+inside (graves | grave accents):
+	insert("``")
 	key(left)
 angle that: 
     text = edit.selected_text()
