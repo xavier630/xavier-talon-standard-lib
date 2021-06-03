@@ -73,6 +73,8 @@ action(browser.toggle_dev_tools):
 ^scroll small: key(j)
 ^scroll small up: key(k)
 ^scroll half: key(d)
+^half down: key(d)
 ^scroll half up$: key(u)
+^half up$: key(u)
 
 
