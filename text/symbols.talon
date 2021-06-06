@@ -4,10 +4,8 @@ double dash: "--"
 (bracket | brack | left bracket): "{"
 (rbrack | are bracket | right bracket): "}"
 triple quote: "'''"
-(triple grave | triple grave accent):
+(triple grave | triple back tick | gravy):
 	insert("```")
-(grave | grave accent):
-    insert("`")
 (dot dot | dotdot): ".."
 #ellipses: "…"
 ellipses: "..."
@@ -47,7 +45,7 @@ inside percent:
 inside quotes:
 	insert('""')
 	key(left)
-inside (graves | grave accents):
+inside (graves | back ticks):
 	insert("``")
 	key(left)
 angle that: 
