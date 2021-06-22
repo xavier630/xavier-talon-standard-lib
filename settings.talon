@@ -14,6 +14,7 @@ settings():
 
     # The default amount used when scrolling continuously
     user.mouse_continuous_scroll_amount = 20
+
     # Stop continuous scroll/gaze scroll with a pop
     user.mouse_enable_pop_stops_scroll = 1
 
