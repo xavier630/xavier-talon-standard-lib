@@ -78,6 +78,14 @@ select word:
 select word left:
     edit.extend_word_left()
 
+(wipe | delete) word left:
+    edit.extend_word_left()
+    edit.delete()
+
+(wipe | delete) word right:
+    edit.extend_word_right()
+    edit.delete()
+
 select word right:
     edit.extend_word_right()
 
