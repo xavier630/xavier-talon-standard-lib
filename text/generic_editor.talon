@@ -27,19 +27,6 @@ go line start:
 
 go line end:
     edit.line_end()
-
-go way left:
-    edit.line_start()
-    edit.line_start()
-
-go way right:
-    edit.line_end()
-
-go way down:
-    edit.file_end()
-
-go way up:
-    edit.file_start()
     
 go bottom:
     edit.file_end()
@@ -89,16 +76,16 @@ select word left:
 select word right:
     edit.extend_word_right()
 
-select way left:
+select line start:
     edit.extend_line_start()
 
-select way right:
+select line end:
     edit.extend_line_end()
 
-select way up:
+select top:
     edit.extend_file_start()
 
-select way down:
+select bottom:
     edit.extend_file_end()
 
 # editing
@@ -109,51 +96,51 @@ indent [more]:
     edit.indent_less()
 
 # deleting
-clear line:
+(wipe | delete) line:
     edit.delete_line()
 
-clear left:
+(wipe | delete) left:
     key(backspace)
 
-clear right:
+(wipe | delete) right:
     key(delete)
 
-clear up:
+(wipe | delete) up:
     edit.extend_line_up()
     edit.delete()
 
-clear down:
+(wipe | delete) down:
     edit.extend_line_down()
     edit.delete()
 
-clear word:
+(wipe | delete) word:
     edit.delete_word()
 
-clear word left:
+(wipe | delete) word left:
     edit.extend_word_left()
     edit.delete()
 
-clear word right:
+(wipe | delete) word right:
     edit.extend_word_right()
     edit.delete()
 
-clear way left:
+(wipe | delete) line start:
     edit.extend_line_start()
     edit.delete()
 
-clear way right:
+(wipe | delete) line end:
     edit.extend_line_end()
     edit.delete()
 
-clear way up:
+(wipe | delete) top:
     edit.extend_file_start()
     edit.delete()
 
-clear way down:
+(wipe | delete) bottom:
     edit.extend_file_end()
     edit.delete()
 
-clear all:
+(wipe | delete) all:
     edit.select_all()
     edit.delete()
 
