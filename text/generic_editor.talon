@@ -65,14 +65,6 @@ select word:
 select word left:
     edit.extend_word_left()
 
-(wipe | delete) word left:
-    edit.extend_word_left()
-    edit.delete()
-
-(wipe | delete) word right:
-    edit.extend_word_right()
-    edit.delete()
-
 select word right:
     edit.extend_word_right()
 
@@ -144,26 +136,32 @@ indent [more]:
     edit.select_all()
     edit.delete()
 
-#copy commands
-copy all:
-    edit.select_all()
+# copying TODO validate they work like 'select_left' and once done, use as a template for cut
+copy line:
+    edit.select_line()
     edit.copy()
-#to do: do we want these variants, seem to conflict
-# copy left:
-#      edit.extend_left()
-#      edit.copy()
-# copy right:
-#     edit.extend_right()
-#     edit.copy()
-# copy up:
-#     edit.extend_up()
-#     edit.copy()
-# copy down:
-#     edit.extend_down()
-#     edit.copy()
 
+copy left:
+    edit.select_left()
+    edit.copy()
+
+copy right:
+    edit.select_right()
+    edit.copy()
+
+copy up:
+    edit.extend_line_up()
+    edit.copy()
+
+copy down:
+    edit.extend_line_down()
+    edit.copy()
+
+# Workaround to be able to select the current word
 copy word:
-    edit.select_word()
+    edit.left() #  In case we're on the rightmost pos already - should be safe even if you're on the left-most pos
+    edit.word_right()
+    edit.extend_word_left()
     edit.copy()
 
 copy word left:
@@ -174,8 +172,24 @@ copy word right:
     edit.extend_word_right()
     edit.copy()
 
-copy line:
-    edit.select_line()
+copy line start:
+    edit.extend_line_start()
+    edit.copy()
+
+copy line end:
+    edit.extend_line_end()
+    edit.copy()
+
+copy top:
+    edit.extend_file_start()
+    edit.copy()
+
+copy bottom:
+    edit.extend_file_end()
+    edit.copy()
+
+copy all:
+    edit.select_all()
     edit.copy()
 
 #cut commands
