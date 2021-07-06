@@ -67,12 +67,4 @@ action(browser.submit_form):
 action(browser.toggle_dev_tools):
 	key(cmd-alt-i)
 
-# Custom - designed for vimium
-^links$: key(f)
-^link$: key(f)
-^scroll small: key(j)
-^scroll small up: key(k)
-^scroll half: key(d)
-^scroll half up$: key(u)
-
 
