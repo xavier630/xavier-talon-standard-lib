@@ -65,3 +65,25 @@ quote that:
 (grave | back tick) that:
     text = edit.selected_text()
     user.paste('`{text}`')
+email template:
+    insert('Hey,')
+    key(enter)
+    key(enter)
+cheers:
+    key(enter)
+    insert('Cheers,')
+    key(enter)
+    insert('Xavier')
+email template full:
+    insert('Hey,')
+    key(enter)
+    key(enter)
+    key(enter)
+    key(enter)
+    insert('Cheers,')
+    key(enter)
+    insert('Xavier')
+   	key(up)
+   	key(up)
+   	key(up)
+
