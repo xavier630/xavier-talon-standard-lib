@@ -52,16 +52,17 @@ class BrowserActions:
         actions.key('cmd-alt-i')
 
 
+# Work out how to get these commands working TODO
 # Custom - designed for vimium
-    def links():
-        actions.key('f')
-    def link():
-        actions.key('f')
-    def scroll_small():
-        actions.key('j')
-    def scroll_small_up():
-        actions.key('k')
-    def scroll_half():
-        actions.key('d')
-    def scroll_half_up():
-        actions.key('u')
+#     def links():
+#         actions.key('f')
+#     def link():
+#         actions.key('f')
+#     def scroll_small():
+#         actions.key('j')
+#     def scroll_small_up():
+#         actions.key('k')
+#     def scroll_half():
+#         actions.key('d')
+#     def scroll_half_up():
+#         actions.key('u')
