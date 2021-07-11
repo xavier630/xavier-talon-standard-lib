@@ -32,7 +32,7 @@ empty escaped string:
 (inside parens | args):
 	insert("()")
 	key(left)
-inside (squares | list):
+inside (squares | square brackets | list):
 	insert("[]")
 	key(left)
 inside (bracket | braces):
@@ -50,7 +50,7 @@ inside (graves | back ticks):
 angle that:
     text = edit.selected_text()
     user.paste("<{text}>")
-(square bracket | square) that:
+(square | square bracket) that:
     text = edit.selected_text()
     user.paste("[{text}]")
 (bracket | brace) that:
