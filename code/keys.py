@@ -157,6 +157,7 @@ symbol_key_words = {
     "dot": ".",
     "point": ".",
     "quote": "'",
+    "apostrophe": "'",
     "L square": "[",
     "left square": "[",
     "square": "[",
