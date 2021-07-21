@@ -1,3 +1,9 @@
+# Fork Features
+* `out in up down` commands for scrolling and zooming
+* Email template commands
+* Extended text selection, deletion, cutting, and copying
+* `clip` command for enter
+
 # knausj_talon
 
 Talon configs for Mac, Windows, and Linux. Very much in progress. This is also intended to work with both Dragon Naturally Speaking and wav2letter.

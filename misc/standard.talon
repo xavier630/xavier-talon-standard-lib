@@ -28,5 +28,5 @@ wipe: key(backspace)
 slap:
 	edit.line_end()
 	key(enter)
-clap:
+clip:
 	key(enter)
