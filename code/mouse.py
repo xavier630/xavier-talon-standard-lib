@@ -188,7 +188,7 @@ class Actions:
         for i in range(number_of_times):
             scroll_function()
             scroll_function()
-            time.sleep(0.4)
+            time.sleep(0.25)
 
     def mouse_scroll_down_continuous():
         """Scrolls down continuously"""
