@@ -9,7 +9,7 @@ touch | cha:
     # End right drag if open so that touch ends both types of drags
 	user.end_mouse_drag(1)
 
-righty | ridy | ride:
+righty | ridy | ridey | ride:
 	mouse_click(1)
 	# close the mouse grid if open
 	user.grid_close()
