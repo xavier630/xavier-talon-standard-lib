@@ -38,11 +38,14 @@ midclick | mid:
 	key("{modifiers}:up")
 	# close the mouse grid
 	user.grid_close()
-(dubclick | duke): 
+(dubclick | duke | highlight):
 	mouse_click()
 	mouse_click()
 	# close the mouse grid
 	user.grid_close()
+highlight line:
+	mouse_click()
+	actions.edit.select_line()
 (tripclick | triplick): 
 	mouse_click()
 	mouse_click()
