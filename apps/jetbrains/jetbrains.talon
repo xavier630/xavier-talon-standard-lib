@@ -50,6 +50,10 @@ find (everywhere | all) <user.text> [over]:
     user.idea("action SearchEverywhere")
     sleep(500ms)
     insert(text)
+find that:
+    key("cmd-f")
+find that global:
+    key("cmd-shift-f")
 (search | find) class: user.idea("action GotoClass")
 (search | find) file: user.idea("action GotoFile")
 (search | find) path: user.idea("action FindInPath")
