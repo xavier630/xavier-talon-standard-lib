@@ -26,6 +26,5 @@ ripe: key(delete)
 (pad | padding):
 	insert("  ") 
 	key(left)
-clip:
-	key(enter)
+
 slap: user.insert_blank_line_below()

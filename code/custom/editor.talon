@@ -18,3 +18,30 @@ line delete:
 
 reverse list | reverse lines:
     user.reverse_lines()
+
+clip:
+	key(enter)
+
+
+# Email commands
+email header:
+    insert('Hey,')
+    key(enter)
+    key(enter)
+email footer:
+    key(enter)
+    insert('Cheers,')
+    key(enter)
+    insert('Xavier')
+email | email template | email full:
+    insert('Hey,')
+    key(enter)
+    key(enter)
+    key(enter)
+    key(enter)
+    insert('Cheers,')
+    key(enter)
+    insert('Xavier')
+   	key(up)
+   	key(up)
+   	key(up)

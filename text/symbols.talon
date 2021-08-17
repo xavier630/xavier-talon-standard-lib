@@ -74,25 +74,5 @@ quote that:
 (grave | back tick) that:
     text = edit.selected_text()
     user.paste('`{text}`')
-email header:
-    insert('Hey,')
-    key(enter)
-    key(enter)
-email footer:
-    key(enter)
-    insert('Cheers,')
-    key(enter)
-    insert('Xavier')
-email | email template | email full:
-    insert('Hey,')
-    key(enter)
-    key(enter)
-    key(enter)
-    key(enter)
-    insert('Cheers,')
-    key(enter)
-    insert('Xavier')
-   	key(up)
-   	key(up)
-   	key(up)
+
 
