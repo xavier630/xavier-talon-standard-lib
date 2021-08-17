@@ -115,6 +115,8 @@ curse yes: user.mouse_show_cursor()
 curse no: user.mouse_hide_cursor()
 copy mouse position: user.copy_mouse_position()
 
+
+# Custom
 wheel in small | up small:
     user.mouse_scroll_repeat_down(2)
 wheel out small | down small:
@@ -123,9 +125,19 @@ wheel in | up:
     user.mouse_scroll_repeat_down(4)
 wheel out | down:
     user.mouse_scroll_repeat_up(4)
-
 wheel in far | up far | wheel down far:
     user.mouse_scroll_repeat_down(8)
 wheel out far | down far | wheel up far:
     user.mouse_scroll_repeat_up(8)
+delete select | delete mouse line:
+	mouse_click()
+    sleep(100ms)
+	edit.select_line()
+    sleep(100ms)
+    edit.delete()
+    edit.delete()
+select | select mouse word:
+    mouse_click()
+	mouse_click()
+
 
