@@ -34,16 +34,6 @@ setting_mouse_enable_pop_click = mod.setting(
 
 @mod.action_class
 class Actions:
-    def reverse_lines():
-        """ Reverse the order of the currently selected lines."""
-        actions.edit.extend_line_start()
-        actions.edit.extend_line_end()
-
-        text = actions.edit.selected_text()
-        lines = text.split('\n')
-        lines.reverse()
-        actions.insert('\n'.join(lines))
-
     def mouse_scroll_repeat_down(number_of_times: int):
         """Scrolls down N times"""
         self.mouse_scroll_repeat(number_of_times, self.mouse_scroll_down)

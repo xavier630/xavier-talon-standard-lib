@@ -41,3 +41,13 @@ class Actions:
         """Create a new blank line below the current one"""
         actions.edit.line_end()
         actions.key("enter")
+
+    def reverse_lines():
+        """ Reverse the order of the currently selected lines."""
+        actions.edit.extend_line_start()
+        actions.edit.extend_line_end()
+        
+        text = actions.edit.selected_text()
+        lines = text.split('\n')
+        lines.reverse()
+        actions.insert('\n'.join(lines))

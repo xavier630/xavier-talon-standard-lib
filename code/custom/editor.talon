@@ -16,8 +16,6 @@ line delete:
     edit.delete()
 
 
-reverse list | reverse lines:
-    user.reverse_lines()
 
 clip:
 	key(enter)
