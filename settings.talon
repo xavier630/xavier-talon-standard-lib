@@ -34,7 +34,7 @@ settings():
     user.grids_put_one_bottom_left = 0
 
     # The number of lines of command history to display by default
-    user.command_history_display = 2
+    user.command_history_display = 20
 
     # The number of lines of command history to keep in total;
     # "command history more" to display all of them, "command history less" to restore
