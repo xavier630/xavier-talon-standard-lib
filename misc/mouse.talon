@@ -40,14 +40,14 @@ midclick | mid:
 	key("{modifiers}:up")
 	# close the mouse grid
 	user.grid_close()
-(dubclick | duke | highlight):
+(dubclick | duke):
 	mouse_click()
 	mouse_click()
 	# close the mouse grid
 	user.grid_close()
 highlight line:
 	mouse_click()
-	actions.edit.select_line()
+	edit.select_line()
 (tripclick | triplick): 
 	mouse_click()
 	mouse_click()
@@ -114,30 +114,5 @@ wheel tiny right here:
 curse yes: user.mouse_show_cursor()
 curse no: user.mouse_hide_cursor()
 copy mouse position: user.copy_mouse_position()
-
-
-# Custom
-wheel in small | up small:
-    user.mouse_scroll_repeat_down(2)
-wheel out small | down small:
-    user.mouse_scroll_repeat_up(2)
-wheel in | up:
-    user.mouse_scroll_repeat_down(4)
-wheel out | down:
-    user.mouse_scroll_repeat_up(4)
-wheel in far | up far | wheel down far:
-    user.mouse_scroll_repeat_down(8)
-wheel out far | down far | wheel up far:
-    user.mouse_scroll_repeat_up(8)
-delete select | delete mouse line:
-	mouse_click()
-    sleep(100ms)
-	edit.select_line()
-    sleep(100ms)
-    edit.delete()
-    edit.delete()
-select | select mouse word:
-    mouse_click()
-	mouse_click()
 
 
