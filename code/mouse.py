@@ -181,21 +181,6 @@ class Actions:
         """Scrolls down"""
         mouse_scroll(setting_mouse_wheel_down_amount.get())()
 
-    def mouse_scroll_repeat_down(number_of_times: int):
-        """Scrolls down N times"""
-        self.mouse_scroll_repeat(number_of_times, self.mouse_scroll_down)
-
-    def mouse_scroll_repeat_up(number_of_times: int):
-        """Scrolls up N times"""
-        self.mouse_scroll_repeat(number_of_times, self.mouse_scroll_up)
-
-    def mouse_scroll_repeat(number_of_times: int, scroll_function: any):
-        """Scrolls N times"""
-        for i in range(number_of_times):
-            scroll_function()
-            scroll_function()
-            time.sleep(0.25)
-
     def mouse_scroll_down_continuous():
         """Scrolls down continuously"""
         global continuous_scoll_mode
