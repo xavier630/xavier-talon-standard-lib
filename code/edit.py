@@ -6,7 +6,7 @@ mod = Module()
 
 
 @ctx.action_class("edit")
-class edit_actions:
+class EditActions:
     def selected_text() -> str:
         with clip.capture() as s:
             actions.edit.copy()
@@ -14,6 +14,9 @@ class edit_actions:
             return s.get()
         except clip.NoChange:
             return ""
+    def line_insert_down():
+        actions.edit.line_end()
+        actions.key("enter")
 
 
 @mod.action_class
@@ -36,11 +39,6 @@ class Actions:
         """Moves right by n words."""
         for _ in range(n):
             actions.edit.word_right()
-
-    def insert_blank_line_below():
-        """Create a new blank line below the current one"""
-        actions.edit.line_end()
-        actions.key("enter")
 
     def reverse_lines():
         """ Reverse the order of the currently selected lines."""
