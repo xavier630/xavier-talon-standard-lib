@@ -16,7 +16,6 @@ line delete:
     edit.delete()
 
 
-
 clip:
 	key(enter)
 

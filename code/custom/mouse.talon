@@ -11,4 +11,5 @@ wheel in far | up far | wheel down far:
     user.mouse_scroll_repeat_down(8)
 wheel out far | down far | wheel up far:
     user.mouse_scroll_repeat_up(8)
-    
+
+
