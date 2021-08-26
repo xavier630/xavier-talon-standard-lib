@@ -7,7 +7,7 @@ line select:
 	mouse_click()
 	actions.edit.select_line()
 
-line delete:
+line (delete | wipe):
 	mouse_click()
     sleep(100ms)
 	edit.select_line()
