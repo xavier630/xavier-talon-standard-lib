@@ -15,10 +15,10 @@ line (delete | wipe):
     edit.delete()
     edit.delete()
 
-
 clip:
 	key(enter)
-
+hey:
+    insert('Hey, ')
 
 # Email commands
 email header:
