@@ -30,7 +30,7 @@ email footer:
     insert('Cheers,')
     key(enter)
     insert('Xavier')
-email | email template | email full:
+email template | email full:
     insert('Hey,')
     key(enter)
     key(enter)
