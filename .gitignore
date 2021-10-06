@@ -3,3 +3,6 @@ __pycache__
 *.sw?
 # Locally generated
 /settings
+
+# Personal
+/code/custom/personal.talon
