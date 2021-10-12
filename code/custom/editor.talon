@@ -19,6 +19,9 @@ clip:
 	key(enter)
 hey:
     insert('Hey, ')
+hey team:
+    insert('Hey team, ')
+
 
 # Email commands
 email header:
