@@ -22,7 +22,6 @@ hey:
 hey team:
     insert('Hey team, ')
 
-
 # Email commands
 email header:
     insert('Hey,')
