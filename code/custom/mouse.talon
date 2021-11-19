@@ -4,13 +4,13 @@ wheel in small | up small:
 wheel out small | down small:
     user.mouse_scroll_repeat_up(2)
 
-
+# Inverted as you need to scroll right to go left, up to go down, etc.
 wheel in | up:
     user.mouse_scroll_repeat_down(4)
 wheel out | down:
     user.mouse_scroll_repeat_up(4)
 wheel left | left | scroll left:
-    user.mouse_scroll_repeat_left(4)
+    user.mouse_scroll_repeat_right(4)
 wheel right | right | scroll right:
     user.mouse_scroll_repeat_left(4)
 
