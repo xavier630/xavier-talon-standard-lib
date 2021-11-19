@@ -42,6 +42,14 @@ class Actions:
         """Scrolls up N times"""
         self.mouse_scroll_repeat(number_of_times, self.mouse_scroll_up)
 
+    def mouse_scroll_repeat_right(number_of_times: int):
+        """Scrolls up N times"""
+        self.mouse_scroll_repeat(number_of_times, self.mouse_scroll_right)
+
+    def mouse_scroll_repeat_left(number_of_times: int):
+        """Scrolls up N times"""
+        self.mouse_scroll_repeat(number_of_times, self.mouse_scroll_left)
+
     def mouse_scroll_repeat(number_of_times: int, scroll_function: any):
         """Scrolls N times"""
         for i in range(number_of_times):
