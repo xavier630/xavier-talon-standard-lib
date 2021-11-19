@@ -1,10 +1,4 @@
 import os
-import time
-from typing import Callable
-
-import pathlib
-import subprocess
-
 
 from talon import (
     Module,
@@ -22,8 +16,7 @@ from talon_plugins.eye_mouse import config, toggle_camera_overlay, toggle_contro
 
 key = actions.key
 self = actions.self
-scroll_amount_vertical = 0
-scroll_amount_horizontal = 0
+scroll_amount = 0
 click_job = None
 scroll_job = None
 gaze_job = None
@@ -205,14 +198,6 @@ class Actions:
         """Scrolls up"""
         mouse_scroll(-amount * setting_mouse_wheel_down_amount.get())()
 
-    def mouse_scroll_left():
-        """Scrolls up"""
-        mouse_scroll(setting_mouse_wheel_down_amount.get(), 0)()
-
-    def mouse_scroll_right():
-        """Scrolls up"""
-        mouse_scroll(-setting_mouse_wheel_down_amount.get(), 0)()
-
     def mouse_scroll_up_continuous():
         """Scrolls up continuously"""
         global continuous_scoll_mode
@@ -310,36 +295,27 @@ def on_pop(active):
 
 noise.register("pop", on_pop)
 
-def calculate_new_scroll_distance(existing_distance_to_scroll, new_distance_to_scroll):
-    '''
-    :param existing_distance_to_scroll: The distance that is already queued to be scrolled.
-    :param new_distance_to_scroll: The distance that is being requested to be scrolled.
-    :return: The distance and direction that should be scrolled taking into account existing and new directions
-    and magnitude.
-    '''
-    if (existing_distance_to_scroll >= 0) == (new_distance_to_scroll >= 0):
-        return existing_distance_to_scroll + new_distance_to_scroll
-    else:
-        return new_distance_to_scroll
 
-def mouse_scroll(distance_y):
-    return mouse_scroll(0, distance_y)
-
-def mouse_scroll(distance_x, distance_y):
+def mouse_scroll(amount):
     def scroll():
-        global scroll_amount_horizontal, scroll_amount_vertical
-        scroll_amount_horizontal = calculate_new_scroll_distance(scroll_amount_horizontal, distance_x)
-        scroll_amount_vertical = calculate_new_scroll_distance(scroll_amount_vertical, distance_y)
-        actions.mouse_scroll(x=int(distance_x), y=int(distance_y))
+        global scroll_amount
+        if continuous_scoll_mode:
+            if (scroll_amount >= 0) == (amount >= 0):
+                scroll_amount += amount
+            else:
+                scroll_amount = amount
+        actions.mouse_scroll(y=int(amount))
+
     return scroll
 
+
 def scroll_continuous_helper():
-    global scroll_amount_vertical
+    global scroll_amount
     # print("scroll_continuous_helper")
-    if scroll_amount_vertical and (
+    if scroll_amount and (
         eye_zoom_mouse.zoom_mouse.state == eye_zoom_mouse.STATE_IDLE
     ):  # or eye_zoom_mouse.zoom_mouse.state == eye_zoom_mouse.STATE_SLEEP):
-        actions.mouse_scroll(by_lines=False, y=int(scroll_amount_vertical / 10))
+        actions.mouse_scroll(by_lines=False, y=int(scroll_amount / 10))
 
 
 def start_scroll():
@@ -381,8 +357,8 @@ def gaze_scroll():
 
 
 def stop_scroll():
-    global scroll_amount_vertical, scroll_job, gaze_job
-    scroll_amount_vertical = 0
+    global scroll_amount, scroll_job, gaze_job, continuous_scoll_mode
+    scroll_amount = 0
     if scroll_job:
         cron.cancel(scroll_job)
 
