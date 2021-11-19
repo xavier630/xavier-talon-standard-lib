@@ -5,6 +5,7 @@ from typing import Callable
 import pathlib
 import subprocess
 
+
 from talon import (
     Module,
     actions,
@@ -94,6 +95,12 @@ setting_mouse_wheel_down_amount = mod.setting(
     default=120,
     desc="The amount to scroll up/down (equivalent to mouse wheel on Windows by default)",
 )
+setting_mouse_wheel_horizontal_amount = mod.setting(
+    "mouse_wheel_horizontal_amount",
+    type=int,
+    default=40,
+    desc="The amount to scroll left/right",
+)
 
 continuous_scoll_mode = ""
 
@@ -178,9 +185,9 @@ class Actions:
         if button_down:
             ctrl.mouse_click(button=0, up=True)
 
-    def mouse_scroll_down():
+    def mouse_scroll_down(amount: float = 1):
         """Scrolls down"""
-        mouse_scroll(setting_mouse_wheel_down_amount.get())()
+        mouse_scroll(amount * setting_mouse_wheel_down_amount.get())()
 
     def mouse_scroll_down_continuous():
         """Scrolls down continuously"""
@@ -194,9 +201,9 @@ class Actions:
         if setting_mouse_hide_mouse_gui.get() == 0:
             gui_wheel.show()
 
-    def mouse_scroll_up():
+    def mouse_scroll_up(amount: float = 1):
         """Scrolls up"""
-        mouse_scroll(-setting_mouse_wheel_down_amount.get())()
+        mouse_scroll(-amount * setting_mouse_wheel_down_amount.get())()
 
     def mouse_scroll_left():
         """Scrolls up"""
@@ -216,6 +223,14 @@ class Actions:
             start_scroll()
         if setting_mouse_hide_mouse_gui.get() == 0:
             gui_wheel.show()
+
+    def mouse_scroll_left(amount: float = 1):
+        """Scrolls left"""
+        actions.mouse_scroll(0, -amount * setting_mouse_wheel_horizontal_amount.get())
+
+    def mouse_scroll_right(amount: float = 1):
+        """Scrolls right"""
+        actions.mouse_scroll(0, amount * setting_mouse_wheel_horizontal_amount.get())
 
     def mouse_scroll_stop():
         """Stops scrolling"""
@@ -295,7 +310,6 @@ def on_pop(active):
 
 noise.register("pop", on_pop)
 
-
 def calculate_new_scroll_distance(existing_distance_to_scroll, new_distance_to_scroll):
     '''
     :param existing_distance_to_scroll: The distance that is already queued to be scrolled.
@@ -318,7 +332,6 @@ def mouse_scroll(distance_x, distance_y):
         scroll_amount_vertical = calculate_new_scroll_distance(scroll_amount_vertical, distance_y)
         actions.mouse_scroll(x=int(distance_x), y=int(distance_y))
     return scroll
-
 
 def scroll_continuous_helper():
     global scroll_amount_vertical
@@ -384,6 +397,8 @@ def stop_scroll():
     scroll_job = None
     gaze_job = None
     gui_wheel.hide()
+
+    continuous_scoll_mode = ""
 
     # if eye_zoom_mouse.zoom_mouse.enabled and eye_mouse.mouse.attached_tracker is not None:
     #    eye_zoom_mouse.zoom_mouse.sleep(False)
