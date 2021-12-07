@@ -58,7 +58,7 @@ class Actions:
             time.sleep(0.25)
 
     def open_list_of_sites(site_string: str):
-        """Opens a list of sites in Chrome. Takes a space-delimited string of sites since talonscript doesn't support
+        """Opens a list of sites in Chrome. Takes a newline-delimited string of sites since talonscript doesn't support
         lists """
         sites = site_string.strip().split('\n')
 
