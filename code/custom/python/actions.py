@@ -60,7 +60,7 @@ class Actions:
     def open_list_of_sites(site_string: str):
         """Opens a list of sites in Chrome. Takes a space-delimited string of sites since talonscript doesn't support
         lists """
-        sites = site_string.strip().split(' ')
+        sites = site_string.strip().split('\n')
 
         # TODO get focusing working
         # actions.user.switcher_focus_app(get_app('chrome'))
@@ -70,7 +70,7 @@ class Actions:
             actions.browser.go(site)
             if index != (len(sites) - 1):
                 actions.app.tab_open()
-            time.sleep(0.25)
+            time.sleep(0.75)
 
 
 
