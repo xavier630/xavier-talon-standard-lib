@@ -62,24 +62,24 @@ class Actions:
         lists """
         sites = site_string.strip().split('\n')
 
-        # TODO get focusing working
-        # actions.user.switcher_focus_app(get_app('chrome'))
-        # time.sleep(0.25)
+        app_name = get_app('Google Chrome').focus()
+        time.sleep(0.5)
+
         actions.browser.go_blank()
         for index, site in enumerate(sites):
             actions.browser.go(site)
             if index != (len(sites) - 1):
                 actions.app.tab_open()
-            time.sleep(0.75)
+            time.sleep(0.65)
 
 
 
-# def get_app(name: str) -> ui.App:
-#     print(ui.apps())
-#     for app in ui.apps():
-#         if name in app.name:
-#             return app
-#     raise RuntimeError("App not found")
+def get_app(name: str) -> ui.App:
+    print(ui.apps())
+    for app in ui.apps():
+        if name.lower() in app.name.lower():
+            return app
+    raise RuntimeError("App not found")
 
 
 
