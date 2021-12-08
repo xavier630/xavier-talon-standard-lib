@@ -4,5 +4,10 @@ __pycache__
 # Locally generated
 /settings
 
+.vscode/settings.json
+
+
+
+
 # Personal
 /code/custom/personal/personal.talon
