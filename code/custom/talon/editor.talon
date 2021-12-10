@@ -5,6 +5,7 @@ select | highlight:
 
 line select:
 	mouse_click()
+    sleep(100ms)
 	actions.edit.select_line()
 
 line (delete | wipe):
