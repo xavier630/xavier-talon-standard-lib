@@ -49,7 +49,7 @@ axle,axel
 eyes,ayes
 bah,baa
 Babel,babble
-bad,bade
+bad,bade,bed
 bait,bate
 bald,balled,bawled
 bail,bale,baal
@@ -211,6 +211,7 @@ eve,eave
 exceed,accede
 except,accept
 exercise,exorcise
+end,and
 I'd,eyed
 faint,feint
 fair,fare
@@ -378,7 +379,7 @@ mill,mil
 mince,mints
 mind,mined
 minor,miner
-Mrs.,misses
+Mrs,misses
 missile,missal
 missed,mist
 might,mite
@@ -550,7 +551,6 @@ Sunday,sundae
 surf,serf
 surge,serge
 sweet,suite
-sweets,suites
 tax,tacks
 tacked,tact
 tale,tail
@@ -616,6 +616,7 @@ wax,whacks
 way,weigh,whey
 we,wee
 where,wear,ware
+were,whir,we're
 whether,weather,wether
 we'd,weed
 week,weak
@@ -627,8 +628,6 @@ Wales,whales,wails
 we'll,wheel
 which,witch
 while,wile
-while,well
-were,whir
 word,whirred
 hoop,whoop
 whose,who's
@@ -640,6 +639,7 @@ one,won
 want,wont
 would,wood
 war,wore
+ward,word
 world,whirled,whorled
 worn,warn
 rack,wrack
