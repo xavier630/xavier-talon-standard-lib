@@ -20,4 +20,9 @@ wheel in far | up far | wheel down far:
 wheel out far | down far | wheel up far:
     user.mouse_scroll_repeat_up(8)
 
+mid:
+	mouse_click(2)
+	# close the mouse grid
+	user.grid_close()
+
 
