@@ -10,7 +10,7 @@ settings():
 (italics | italicize) [that]: key(cmd-i)
 (strike | strikethrough) [that]: key(cmd-ctrl-k)
 underline [that]: key(cmd-ctrl-k)
-checkbox [that]: key(cmd-shift-c)
+(checkbox | checklist) [that]: key(cmd-shift-c)
 [numbered] list [that]: key(cmd-shift-o)
 bulleted list [that]: key(cmd-shift-u)
 task: key(cmd-t)
