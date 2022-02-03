@@ -16,6 +16,13 @@ line (delete | wipe):
     edit.delete()
     edit.delete()
 
+# touch-paste
+taste:
+    mouse_click()
+    sleep(50ms)
+    edit.paste()
+
+
 clip:
 	key(enter)
 hey:
