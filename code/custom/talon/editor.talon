@@ -19,7 +19,7 @@ line (delete | wipe):
 # touch-paste
 taste:
     mouse_click()
-    sleep(50ms)
+    sleep(20ms)
     edit.paste()
 
 
