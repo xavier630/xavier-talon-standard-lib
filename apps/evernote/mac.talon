@@ -12,7 +12,7 @@ settings():
 underline [that]: key(cmd-ctrl-k)
 (checkbox | checklist) [that]: key(cmd-shift-c)
 [numbered] list [that]: key(cmd-shift-o)
-bulleted list [that]: key(cmd-shift-u)
+(bullet | bulleted list) [that]: key(cmd-shift-u)
 task: key(cmd-t)
 
 # Application-related
