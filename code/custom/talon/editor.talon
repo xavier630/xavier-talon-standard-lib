@@ -70,7 +70,7 @@ stock [analysis] template:
     key(enter)
     key(enter)
 
-pyspark col:
+pyspark col | pyspark column:
     insert("F.col('')")
     key(left)
     key(left)
