@@ -69,3 +69,8 @@ stock [analysis] template:
     insert('Supporting Documentation')
     key(enter)
     key(enter)
+
+pyspark col:
+    insert("F.col('')")
+    key(left)
+    key(left)
