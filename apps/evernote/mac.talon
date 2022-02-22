@@ -14,6 +14,7 @@ underline [that]: key(cmd-ctrl-k)
 [numbered] list [that]: key(cmd-shift-o)
 (bullet | bulleted list) [that]: key(cmd-shift-u)
 task: key(cmd-t)
+([insert] | [attach]) (link | hyperlink): key(cmd-k)
 
 # Application-related
 search: key(cmd-j)
