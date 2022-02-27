@@ -74,3 +74,6 @@ pyspark col | pyspark column:
     insert("F.col('')")
     key(left)
     key(left)
+
+console log:
+    insert("console.log()")
