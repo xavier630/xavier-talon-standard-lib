@@ -25,7 +25,7 @@ taste:
 
 clip:
 	key(enter)
-hey:
+greet | greeting:
     insert('Hey, ')
 hey team:
     insert('Hey team, ')
