@@ -16,13 +16,20 @@ line (delete | wipe):
     edit.delete()
     edit.delete()
 
+# touch-copy
+topy:
+    mouse_click()
+    sleep(20ms)
+    edit.copy()
+
 # touch-paste
 taste:
     mouse_click()
     sleep(20ms)
     edit.paste()
 
-
+comment:
+    key('cmd-/')
 clip:
 	key(enter)
 greet | greeting:
