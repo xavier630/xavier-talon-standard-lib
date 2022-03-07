@@ -14,7 +14,13 @@ underline [that]: key(cmd-ctrl-k)
 [numbered] list [that]: key(cmd-shift-o)
 (bullet | bulleted list) [that]: key(cmd-shift-u)
 task: key(cmd-t)
-([insert] | [attach]) (link | hyperlink): key(cmd-k)
+
+# Insert Link from clipboard
+([insert] | [attach]) (link | hyperlink):
+    key(cmd-k)
+    sleep(200ms)
+    edit.paste()
+    key(enter)
 
 # Application-related
 search: key(cmd-j)
