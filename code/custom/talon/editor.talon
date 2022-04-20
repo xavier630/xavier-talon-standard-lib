@@ -85,3 +85,6 @@ pyspark col | pyspark column:
 
 console log:
     insert("console.log()")
+    
+reverse list | reverse lines:
+    user.reverse_lines()
