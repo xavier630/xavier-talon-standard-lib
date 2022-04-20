@@ -20,4 +20,3 @@ mode: all
 ^tell wake$: speech.enable()
 ^talon sleep [<phrase>]$: speech.disable()
 ^talon wake$: speech.enable()
-

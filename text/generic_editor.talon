@@ -27,10 +27,23 @@ go line start:
 
 go line end:
     edit.line_end()
-    
+
+go way left:
+    edit.line_start()
+    edit.line_start()
+
+go way right:
+    edit.line_end()
+
+go way down:
+    edit.file_end()
+
+go way up:
+    edit.file_start()
+
 go bottom:
     edit.file_end()
-    
+
 go top:
     edit.file_start()
 
@@ -228,3 +241,4 @@ cut line:
 
 reverse list | reverse lines:
     user.reverse_lines()
+

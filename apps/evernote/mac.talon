@@ -26,3 +26,4 @@ task: key(cmd-t)
 search: key(cmd-j)
 notes: key(cmd-option-1)
 notebooks: key(cmd-option-2)
+
