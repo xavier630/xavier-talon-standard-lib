@@ -61,20 +61,34 @@ email template | email full:
    	key(up)
 
 stock [analysis] template:
+    key(cmd-b)
     insert('Date: ')
     insert(user.time_format("%Y-%m-%d"))
+    key(cmd-b)
     key(enter)
     key(enter)
+
+    key(cmd-b)
     insert('Links')
+    key(cmd-b)
     key(enter)
     key(enter)
+
+    key(cmd-b)
     insert('Profitability/NTA')
+    key(cmd-b)
     key(enter)
     key(enter)
+    
+    key(cmd-b)
     insert('Risks/Questions')
+    key(cmd-b)
     key(enter)
     key(enter)
+
+    key(cmd-b)
     insert('Supporting Documentation')
+    key(cmd-b)
     key(enter)
     key(enter)
 
@@ -85,6 +99,6 @@ pyspark col | pyspark column:
 
 console log:
     insert("console.log()")
-    
+
 reverse list | reverse lines:
     user.reverse_lines()
