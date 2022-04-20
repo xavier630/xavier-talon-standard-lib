@@ -62,6 +62,7 @@ email template | email full:
 
 stock [analysis] template:
     insert('Date: ')
+    insert(user.time_format("%Y-%m-%d"))
     key(enter)
     key(enter)
     insert('Links')
@@ -70,7 +71,7 @@ stock [analysis] template:
     insert('Profitability/NTA')
     key(enter)
     key(enter)
-    insert('Risks')
+    insert('Risks/Questions')
     key(enter)
     key(enter)
     insert('Supporting Documentation')
