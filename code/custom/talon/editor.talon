@@ -75,11 +75,11 @@ stock [analysis] template:
     key(enter)
 
     key(cmd-b)
-    insert('Profitability/NTA')
+    insert('Profitability, NTA, sum of future cashflows')
     key(cmd-b)
     key(enter)
     key(enter)
-    
+
     key(cmd-b)
     insert('Risks/Questions')
     key(cmd-b)
