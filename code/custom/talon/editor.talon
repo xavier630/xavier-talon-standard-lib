@@ -87,6 +87,12 @@ stock [analysis] template:
     key(enter)
 
     key(cmd-b)
+    insert('Change in stocks on issue')
+    key(cmd-b)
+    key(enter)
+    key(enter)
+
+    key(cmd-b)
     insert('Supporting Documentation')
     key(cmd-b)
     key(enter)
