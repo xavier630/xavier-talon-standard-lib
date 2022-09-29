@@ -15,7 +15,6 @@ underline [that]: key(cmd-ctrl-k)
 (bullet | bulleted list) [that]: key(cmd-shift-u)
 task: key(cmd-t)
 
-# TODO fix
 # Application-related
 search: key(cmd-j)
 notes: key(cmd-option-1)
