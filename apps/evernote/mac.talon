@@ -15,13 +15,7 @@ underline [that]: key(cmd-ctrl-k)
 (bullet | bulleted list) [that]: key(cmd-shift-u)
 task: key(cmd-t)
 
-# Insert Link from clipboard
-([insert] | [attach]) (link | hyperlink):
-    key(cmd-k)
-    sleep(200ms)
-    edit.paste()
-    key(enter)
-
+# TODO fix
 # Application-related
 search: key(cmd-j)
 notes: key(cmd-option-1)
