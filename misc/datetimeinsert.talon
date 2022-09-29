@@ -9,4 +9,4 @@ timestamp high resolution:
 timestamp UTC:
     insert(user.time_format_utc("%Y-%m-%d %H:%M:%S"))
 timestamp UTC high resolution:
-    insert(user.time_format_utc("%Y-%m-%d %H:%M:%S.%f"))
+
