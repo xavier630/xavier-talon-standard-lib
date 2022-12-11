@@ -1,3 +1,6 @@
+# Personal
+/code/custom/personal/personal.talon
+
 # Dev stuff
 __pycache__
 *.sw?
@@ -6,9 +9,4 @@ __pycache__
 /settings
 
 .vscode/settings.json
-
-
-
-
-# Personal
-/code/custom/personal/personal.talon
+.DS_Store
