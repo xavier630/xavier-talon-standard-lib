@@ -1,17 +1,11 @@
 from talon import Context, Module, actions, app
-
-<<<<<<< HEAD:code/keys.py
-default_alphabet = "arch bat cap drum each fine gust harp sit jury crunch look made near odd pit quench red sun trap urge vest whale plex yank zulu".split(
-    " "
-=======
 from ..user_settings import get_list_from_csv
-
 
 def setup_default_alphabet():
     """set up common default alphabet.
 
     no need to modify this here, change your alphabet using alphabet.csv"""
-    initial_default_alphabet = "air bat cap drum each fine gust harp sit jury crunch look made near odd pit quench red sun trap urge vest whale plex yank zip".split(
+    initial_default_alphabet = "arch bat cap drum each fine gust harp sit jury crunch look made near odd pit quench red sun trap urge vest whale plex yank zulu".split(
         " "
     )
     initial_letters_string = "abcdefghijklmnopqrstuvwxyz"
@@ -24,7 +18,6 @@ def setup_default_alphabet():
 
 alphabet_list = get_list_from_csv(
     "alphabet.csv", ("Letter", "Spoken Form"), setup_default_alphabet()
->>>>>>> main:core/keys/keys.py
 )
 
 default_digits = "zero one two three four five six seven eight nine".split(" ")
