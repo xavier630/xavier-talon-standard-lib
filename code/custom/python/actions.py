@@ -51,7 +51,7 @@ class Actions:
         self.mouse_scroll_repeat(number_of_times, self.mouse_scroll_left)
 
     def mouse_scroll_repeat(number_of_times: int, scroll_function: any):
-        """Scrolls N times"""
+        """Scrolls {number_of_times} times"""
         for i in range(number_of_times):
             scroll_function()
             scroll_function()
@@ -71,6 +71,12 @@ class Actions:
             if index != (len(sites) - 1):
                 actions.app.tab_open()
             time.sleep(0.65)
+
+    def mouse_delay_click(number_of_times: int, mouse_button: int, delay_in_seconds: float):
+        """Clicks {number_of_times} times"""
+        for i in range(number_of_times):
+            actions.mouse_click(mouse_button)
+            time.sleep(delay_in_seconds)
 
 
 

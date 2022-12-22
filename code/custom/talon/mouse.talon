@@ -25,4 +25,8 @@ mid:
 	# close the mouse grid
 	user.grid_close()
 
+delay touch:
+    user.mouse_delay_click(5, 0, 0.75)
 
+delay touch many:
+    user.mouse_delay_click(25, 0, 0.75)
