@@ -19,6 +19,7 @@ line (delete | wipe):
 # touch-copy
 topy:
     mouse_click()
+	mouse_click()
     sleep(20ms)
     edit.copy()
 
