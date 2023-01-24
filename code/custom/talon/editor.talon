@@ -109,3 +109,8 @@ console log:
 
 reverse list | reverse lines:
     user.reverse_lines()
+
+times:
+    insert(" * ")
+
+month: insert(user.time_format_utc("%B %Y"))
