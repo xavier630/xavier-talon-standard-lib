@@ -30,3 +30,8 @@ delay touch:
 
 delay touch many:
     user.mouse_delay_click(25, 0, 0.75)
+
+ridey | ridy:
+    mouse_click(1)
+    # close the mouse grid if open
+    user.grid_close()
