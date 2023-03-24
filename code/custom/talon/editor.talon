@@ -62,42 +62,12 @@ email template | email full:
    	key(up)
 
 stock [analysis] template:
-    key(cmd-b)
-    insert('Date: ')
-    insert(user.time_format("%Y-%m-%d"))
-    key(cmd-b)
-    key(enter)
-    key(enter)
-
-    key(cmd-b)
-    insert('Links')
-    key(cmd-b)
-    key(enter)
-    key(enter)
-
-    key(cmd-b)
-    insert('Profitability, NTA, sum of future cashflows')
-    key(cmd-b)
-    key(enter)
-    key(enter)
-
-    key(cmd-b)
-    insert('Risks/Questions')
-    key(cmd-b)
-    key(enter)
-    key(enter)
-
-    key(cmd-b)
-    insert('Change in stocks on issue')
-    key(cmd-b)
-    key(enter)
-    key(enter)
-
-    key(cmd-b)
-    insert('Supporting Documentation')
-    key(cmd-b)
-    key(enter)
-    key(enter)
+    user.create_section(user.time_format("%Y-%m-%d"))
+    user.create_section_with_list('Links')
+    user.create_section_with_list('Profitability, NTA, sum of future cashflows')
+    user.create_section_with_list('Risks/Questions')
+    user.create_section_with_list('Change in stocks on issue')
+    user.create_section_with_list('Supporting Documentation')
 
 pyspark col | pyspark column:
     insert("F.col('')")
