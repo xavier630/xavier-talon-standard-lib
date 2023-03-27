@@ -9,7 +9,7 @@ settings():
 (bold | embolden) [that]: key(cmd-b)
 (italics | italicize) [that]: key(cmd-i)
 (strike | strikethrough) [that]: key(cmd-ctrl-k)
-underline [that]: key(cmd-ctrl-k)
+underline [that]: key(cmd-u)
 (checkbox | checklist) [that]: key(cmd-shift-c)
 [numbered] list [that]: key(cmd-shift-o)
 (bullet | bulleted list) [that]: key(cmd-shift-u)
