@@ -84,3 +84,35 @@ times:
     insert(" * ")
 
 month: insert(user.time_format_utc("%B %Y"))
+
+
+### Holding keys - ideally these would be generic, but Talon has a hard time detecting them if you make the letter generic
+# Todo switch to python func which takes a letter, and a number of ms runs all three commands
+hold w:
+    key("w:down")
+    sleep(10000ms)
+    key("w:up")
+
+hold w long:
+    key("w:down")
+    sleep(20000ms)
+    key("w:up")
+
+release w:
+    key("w:up")
+
+hold s:
+    key("s:down")
+    sleep(10000ms)
+    key("s:up")
+
+hold s long:
+    key("s:down")
+    sleep(20000ms)
+    key("s:up")
+
+release s:
+    key("s:up")
+### End holding keys
+
+
