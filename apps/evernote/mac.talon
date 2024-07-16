@@ -3,7 +3,7 @@ os: mac
 -
 settings():
     # Necessary to stop commands like 'slap' getting jumbled
-    key_wait = 13.0
+    key_wait = 19.0
 
 # Text editing-related
 (bold | embolden) [that]: key(cmd-b)
