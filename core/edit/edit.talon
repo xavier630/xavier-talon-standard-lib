@@ -82,11 +82,11 @@ file save all: edit.save_all()
 
 # Xavier
 copy left:
-    edit.select_left()
+    edit.extend_word_left()
     edit.copy()
 
 copy right:
-    edit.select_right()
+    edit.extend_word_right()
     edit.copy()
 
 copy up:
