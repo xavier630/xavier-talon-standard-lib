@@ -57,7 +57,7 @@ angle that:
     text = edit.selected_text()
     user.paste("{{{text}}}")
 
-(parens | args) that:
+(parens | paren | args) that:
     user.deprecate_command("2024-11-24", "(parens | args) that", "round that")
     text = edit.selected_text()
     user.paste("({text})")
