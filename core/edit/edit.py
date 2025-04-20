@@ -151,3 +151,13 @@ class Actions:
         """Cut current line"""
         actions.edit.select_line()
         actions.edit.cut()
+
+    def reverse_lines():
+        """ Reverse the order of the currently selected lines."""
+        actions.edit.extend_line_start()
+        actions.edit.extend_line_end()
+
+        text = actions.edit.selected_text()
+        lines = text.split('\n')
+        lines.reverse()
+        actions.insert('\n'.join(lines))
