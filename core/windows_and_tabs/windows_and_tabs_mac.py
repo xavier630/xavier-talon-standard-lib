@@ -38,16 +38,13 @@ class AppActions:
     def window_open():
         actions.key("cmd-n")
 
-    def window_open():
-        actions.key('cmd-n')
+    # Custom behavior to handle Mac desktop 'Spaces'
+    def window_previous():
+        switch_window_by_offset_from_current(-1)
 
     # Custom behavior to handle Mac desktop 'Spaces'
     def window_next():
         switch_window_by_offset_from_current(1)
-
-    # Custom behavior to handle Mac desktop 'Spaces'
-    def window_previous():
-        switch_window_by_offset_from_current(-1)
 
     def switch_window_by_offset_from_current(offset):
         active_window = ui.active_window()
