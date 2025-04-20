@@ -11,3 +11,8 @@ file start: fileStart
 way up: fileStart
 file end: fileEnd
 way down: fileEnd
+
+# Xavier
+top: fileStart
+bottom: fileEnd
+

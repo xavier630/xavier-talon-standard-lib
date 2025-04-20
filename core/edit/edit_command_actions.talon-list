@@ -11,3 +11,7 @@ paste: pasteFromClipboard
 paste to: pasteFromClipboard
 
 clear: delete
+
+# Xavier
+wipe: delete
+delete: delete

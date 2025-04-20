@@ -78,3 +78,21 @@ file save: edit.save()
 file save all: edit.save_all()
 
 [go] line mid: user.line_middle()
+
+
+# Xavier
+copy left:
+    edit.extend_word_left()
+    edit.copy()
+
+copy right:
+    edit.extend_word_right()
+    edit.copy()
+
+copy up:
+    edit.extend_line_up()
+    edit.copy()
+
+copy down:
+    edit.extend_line_down()
+    edit.copy()

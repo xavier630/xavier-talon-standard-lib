@@ -17,3 +17,7 @@ smash: NO_SPACES
 snake: SNAKE_CASE
 string: SINGLE_QUOTED_STRING
 constant: ALL_CAPS,SNAKE_CASE
+
+# Xavier
+lower: ALL_LOWERCASE
+
