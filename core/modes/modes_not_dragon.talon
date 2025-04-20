@@ -39,3 +39,9 @@ not speech.engine: dragon
     user.help_hide()
     user.mouse_sleep()
     speech.disable()
+
+ # Xavier
+ ^tell sleep$: speech.disable()
+ ^talon sleep$: speech.disable()
+ ^wake up$: speech.enable()
+ ^tell wake$: speech.enable()
