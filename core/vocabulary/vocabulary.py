@@ -115,6 +115,7 @@ rep.update(
         "that": "bar",
         "this is": "stopping early",
         "this is a test": "it worked!",
+
     }
 )
 assert rep.replace_string("gnork") == "gnork"

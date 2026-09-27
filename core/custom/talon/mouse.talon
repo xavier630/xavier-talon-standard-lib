@@ -31,6 +31,12 @@ delay touch:
 delay touch many:
     user.mouse_delay_click(25, 0, 0.75)
 
+delay rick:
+    user.mouse_delay_click(5, 1, 0.75)
+
+delay rick many:
+    user.mouse_delay_click(25, 1, 0.75)
+
 delay mid:
     user.mouse_delay_click(5, 2, 0.75)
 
