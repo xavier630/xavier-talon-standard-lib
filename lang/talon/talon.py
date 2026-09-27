@@ -41,7 +41,6 @@ tag: user.talon_python
 
 
 def on_update_decls(decls):
-    # todo modes?
     for thing in [
         "actions",
         "lists",
@@ -125,6 +124,7 @@ operators = Operators(
     MATH_ADD=" + ",
     MATH_MULTIPLY=" * ",
     MATH_DIVIDE=" / ",
+    MATH_MODULO=" % ",
     ASSIGNMENT=" = ",
 )
 
@@ -134,10 +134,13 @@ class UserActions:
     def code_get_operators() -> Operators:
         return operators
 
-    def code_comment_line_prefix():
-        actions.auto_insert("#")
-
     def code_insert_function(text: str, selection: str):
         text += f"({selection or ''})"
         actions.user.paste(text)
         actions.edit.left()
+
+    def code_insert_true():
+        actions.insert("true")
+
+    def code_insert_false():
+        actions.insert("false")
