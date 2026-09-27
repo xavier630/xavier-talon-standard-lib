@@ -1,25 +1,11 @@
-import os
 import time
-from typing import Callable
-
-import pathlib
-import subprocess
 
 from talon import (
     Module,
     actions,
-    app,
-    clip,
-    cron,
-    ctrl,
-    imgui,
-    noise,
     ui,
 )
-from talon_plugins import eye_mouse, eye_zoom_mouse
-from talon_plugins.eye_mouse import config, toggle_camera_overlay, toggle_control
 
-key = actions.key
 self = actions.self
 
 mod = Module()
@@ -52,7 +38,7 @@ class Actions:
 
     def mouse_scroll_repeat(number_of_times: int, scroll_function: any):
         """Scrolls {number_of_times} times"""
-        for i in range(number_of_times):
+        for _i in range(number_of_times):
             scroll_function()
             scroll_function()
             time.sleep(0.25)
@@ -62,7 +48,7 @@ class Actions:
         lists """
         sites = site_string.strip().split('\n')
 
-        app_name = get_app('Google Chrome').focus()
+        get_app('Google Chrome').focus()
         time.sleep(0.5)
 
         actions.browser.go_blank()
@@ -74,7 +60,7 @@ class Actions:
 
     def mouse_delay_click(number_of_times: int, mouse_button: int, delay_in_seconds: float):
         """Clicks {number_of_times} times"""
-        for i in range(number_of_times):
+        for _i in range(number_of_times):
             actions.mouse_click(mouse_button)
             time.sleep(delay_in_seconds)
 
@@ -86,8 +72,6 @@ def get_app(name: str) -> ui.App:
         if name.lower() in app.name.lower():
             return app
     raise RuntimeError("App not found")
-
-
 
 
 
