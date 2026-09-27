@@ -167,12 +167,8 @@ class UI:
     Stub out UI so we don't get crashes
     """
 
-    App = object
     def register(*args, **kwargs):
         pass
-
-    def apps(*args, **kwargs):
-        return []
 
     Rect = object
 
@@ -212,10 +208,7 @@ class App:
 actions = Actions()
 app = App
 clip = None
-cron = object()
-ctrl = object()
 imgui = ImgUI()
-noise = object()
 ui = UI()
 settings = Settings()
 resource = Resource()
